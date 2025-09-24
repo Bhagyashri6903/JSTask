@@ -1,0 +1,40 @@
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Page</title>
+</head>
+<body>
+
+    <input type="text" id="value" placeholder="Enter the value">
+<button id="btn">Print Table</button>
+
+   <table id="tbl" border="1">
+
+    
+   </table>
+</body>
+<script>
+    let tbl=document.getElementById('tbl');
+    let btn=document.getElementById('btn');
+    btn.addEventListener('click',() => {
+
+        let inputValue = document.getElementById('value').value;
+        tbl.innerHTML='';
+        for (let i = 1; i <=10; i++) {
+            let tr=document.createElement('tr');
+            let th=document.createElement('th');
+
+
+            th.innerText=inputValue * i;
+
+            tr.appendChild(th);
+
+            tbl.appendChild(tr);
+    
+        }
+    })
+   
+</script>
+</html>
